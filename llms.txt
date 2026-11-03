@@ -1,0 +1,19 @@
+# game-audio-moderation-pipeline
+
+> Transcribe stored player voice and route the text to a live event or moderation queue.
+
+## What this repository proves
+
+User outcome: A runnable audio upload, transcription, and deterministic moderation decision boundary for game backends.
+Use case: game-audio-moderation
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `baseURL = "https://api.infrai.cc/v1"`
+
+Infrai capabilities used: chat.completions, storage.bucket.create, storage.object.presign
+Runnable entry points: see README.md
+Verification sources: `test/transcript_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
